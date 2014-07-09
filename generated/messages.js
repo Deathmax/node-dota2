@@ -103,7 +103,10 @@ Dota2.EDOTAGCMsg = {
     k_EMsgGCLeaguesInMonthRequest: 7195,
     k_EMsgGCLeaguesInMonthResponse: 7196,
 
-    k_EMsgDOTALiveLeagueGameUpdate: 7402
+    k_EMsgDOTALiveLeagueGameUpdate: 7402,
+
+    k_EMsgGCRequestMatches: 7064,
+    k_EMsgGCRequestMatchesResponse: 7065
 };
 
 Dota2.DOTAChatChannelType_t = {
