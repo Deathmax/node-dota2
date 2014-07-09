@@ -54,7 +54,7 @@ Dota2.Dota2Client.prototype.matchHistoryRequest = function(league_id, start_at_m
   }
 
   if (this.debug) util.log("Sending CMsgDOTARequestMatches");
-  var payload = dota_gcmessages.CMsgDOTARequestMatches.serialize({
+  var payload = dota_gcmessages_client.CMsgDOTARequestMatches.serialize({
     tournament_games_only: true,
     league_id: league_id,
     start_at_match_id: start_at_match_id
@@ -92,7 +92,7 @@ handlers[Dota2.EDOTAGCMsg.k_EMsgGCMatchmakingStatsResponse] = function onMatchma
 };
 
 handlers[Dota2.EDOTAGCMsg.k_EMsgGCRequestMatchesResponse] = function onRequestMatchesResponse(message, callback) {
-  var response = dota_gcmessages.CMsgDOTARequestMatchesResponse.parse(message);
+  var response = dota_gcmessages_client.CMsgDOTARequestMatchesResponse.parse(message);
 
   if (this.debug) util.log("Received requestMatchesResponse result with " + response.total_results);
   this.emit("matchList", null, response);
