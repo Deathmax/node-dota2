@@ -55,9 +55,9 @@ Dota2.Dota2Client.prototype.matchHistoryRequest = function(league_id, start_at_m
 
   if (this.debug) util.log("Sending CMsgDOTARequestMatches");
   var payload = dota_gcmessages_client.CMsgDOTARequestMatches.serialize({
-    tournament_games_only: true,
     league_id: league_id,
-    start_at_match_id: start_at_match_id
+    start_at_match_id: start_at_match_id,
+    matches_requested: 100
   });
 
   this._client.toGC(this._appid, (Dota2.EDOTAGCMsg.k_EMsgGCRequestMatches | protoMask), payload, callback);

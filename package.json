@@ -1,6 +1,6 @@
 {
   "name": "dota2",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "dependencies": {
     "protobuf": "*",
     "deferred": "*",
@@ -15,7 +15,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/RJacksonm1/node-dota2.git"
+    "url": "git://github.com/Deathmax/node-dota2.git"
   },
   "keywords": [
     "steam",
